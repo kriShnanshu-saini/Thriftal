@@ -9,7 +9,7 @@ var passport = require('passport');
   
 
 //connect to mongo
-mongoose.connect ('mongodb://localhost/thriftal')
+mongoose.connect ('mongodb+srv://anshul:SSWClj8pOJ747pU2@cluster0.w8vtlqo.mongodb.net/thriftal?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>{
   console.log('here......')
 })
@@ -69,6 +69,7 @@ app.use(function(req, res, next) {
 //routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+// app.use('*', productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
